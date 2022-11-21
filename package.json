@@ -1,0 +1,112 @@
+{
+    "name": "blockchain-workshop",
+    "description": "",
+    "license": "MIT",
+    "author": "",
+    "homepage": "",
+    "version": "0.0.1",
+    "main": "",
+    "files": [
+        "dist/js/build",
+        "dist/js/src"
+    ],
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "build": "dotenv -e .env cross-env NODE_OPTIONS=\"--max_old_space_size=8192\" webpack build --progress",
+        "clean": "shx rm -rf dist build",
+        "compile": "hardhat compile",
+        "start:ethereum": "hardhat node",
+        "prettier": "prettier --write --config-precedence file-override './src/**/*'",
+        "test": "hardhat test",
+        "start": "dotenv -e .env cross-env NODE_OPTIONS=\"--max_old_space_size=8192\" webpack serve --progress",
+        "preview": "http-server -c-1 ./dist --port 3007"
+    },
+    "types": "dist/js/src/index.d.ts",
+    "dependencies": {
+        "@ckb-lumos/codec": "0.17.0",
+        "@ckb-lumos/lumos": "0.17.0",
+        "@lay2/pw-core": "~0.4.0-alpha.13",
+        "antd": "^4.23.1",
+        "dotenv-cli": "^6.0.0",
+        "ethers": "^5.6.1",
+        "file-loader": "^6.2.0",
+        "node-fetch": "2.6.7",
+        "react-toastify": "^7.0.4",
+        "up-ckb-alpha-test": "0.1.5",
+        "up-core-test": "0.1.12"
+    },
+    "devDependencies": {
+        "@babel/preset-react": "^7.18.6",
+        "@nomiclabs/hardhat-ethers": "2.0.5",
+        "@nomiclabs/hardhat-waffle": "2.0.2",
+        "@typechain/ethers-v5": "9.0.0",
+        "@typechain/hardhat": "4.0.0",
+        "@types/chai": "^4.3.1",
+        "@types/mocha": "^9.1.1",
+        "@types/node": "^17.0.31",
+        "@types/node-fetch": "^2.6.2",
+        "@types/react": "16.9.21",
+        "@types/react-copy-to-clipboard": "^5.0.4",
+        "@types/react-dom": "16.9.5",
+        "@typescript-eslint/eslint-plugin": "2.19.2",
+        "@typescript-eslint/parser": "2.19.2",
+        "assert": "^2.0.0",
+        "chai": "^4.3.6",
+        "cross-env": "7.0.0",
+        "crypto-browserify": "^3.12.0",
+        "css-loader": "3.4.2",
+        "eslint": "6.8.0",
+        "eslint-config-airbnb-base": "14.0.0",
+        "eslint-config-prettier": "6.10.0",
+        "eslint-plugin-import": "2.20.1",
+        "eslint-plugin-prettier": "3.1.2",
+        "eslint-plugin-react": "7.18.3",
+        "ethlint": "1.2.5",
+        "extract-text-webpack-plugin": "3.0.2",
+        "fork-ts-checker-webpack-plugin": "4.0.4",
+        "hardhat": "2.9.3",
+        "html-webpack-plugin": "5.3.1",
+        "http-server": "^14.1.1",
+        "https-browserify": "^1.0.0",
+        "os-browserify": "^0.3.0",
+        "prettier": "1.19.1",
+        "process": "^0.11.10",
+        "react": "16.12.0",
+        "react-copy-to-clipboard": "^5.1.0",
+        "react-dom": "16.12.0",
+        "sass": "^1.54.9",
+        "sass-loader": "^13.0.2",
+        "shx": "0.3.2",
+        "stream-browserify": "^3.0.0",
+        "stream-http": "^3.1.1",
+        "style-loader": "1.1.3",
+        "ts-loader": "6.2.1",
+        "ts-node": "8.6.2",
+        "typechain": "7.0.1",
+        "typescript": "4.2.3",
+        "url-loader": "^4.1.1",
+        "vm-browserify": "^1.1.2",
+        "webpack": "5.74.0",
+        "webpack-cli": "4.6.0",
+        "webpack-dev-server": "3.11.2"
+    },
+    "engines": {
+        "node": ">= 14"
+    },
+    "browserslist": {
+        "production": [
+            "chrome >= 67",
+            "edge >= 79",
+            "firefox >= 68",
+            "opera >= 54",
+            "safari >= 14"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

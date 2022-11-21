@@ -1,0 +1,17 @@
+.tip {
+    color: #141D26;
+    font-size: 12px;
+    padding-top: 32px;
+    text-align: center;
+    letter-spacing: -0.05em;
+    a {
+        color: #141D26;
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: 700;
+    }
+    a:hover {
+        color: unset;
+        text-decoration: underline;
+    }
+}

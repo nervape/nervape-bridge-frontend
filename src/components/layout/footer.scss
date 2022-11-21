@@ -1,0 +1,38 @@
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0;
+    .footer-item {
+        display: inline-flex;
+        padding-left: 32px;
+        font-weight: 400;
+        letter-spacing: 0;
+        .brand-assets,
+        .contact-us,
+        .wiki {
+            cursor: pointer;
+            padding-left: 32px;
+            a {
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+.footer.mobile {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 100px;
+    .footer-item {
+        padding-left: 0;
+        padding-bottom: 20px;
+    }
+}

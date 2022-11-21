@@ -1,0 +1,14 @@
+version: "3"
+services:
+  nervape_bridge_client:
+    container_name: nervape_bridge_client
+    image: "node:16"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - "3007:3007"
+    command: /bin/bash -c "yarn && yarn build && yarn preview"

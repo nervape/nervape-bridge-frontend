@@ -1,0 +1,98 @@
+.account {
+    width: 100%;
+    padding-top: 118px;
+    padding-bottom: 28px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    .title {
+        font-size: 32px;
+        font-weight: 700;
+        flex: 1;
+        span {
+            color: #ffffff;
+            letter-spacing: -0.05em;
+        }
+    }
+    .address {
+        background: linear-gradient(90deg, rgba(244, 77, 55, 0.2) 0%, rgba(244, 77, 55, 0) 100%);
+        border: 1px solid #f44d37;
+        border-radius: 20px;
+        height: 32px;
+        line-height: 32px;
+        span {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 0 26px;
+        }
+    }
+    .address.open {
+        background: rgba(244, 77, 55, 0.9);
+    }
+}
+
+.account-dropmenu {
+    background: rgba(244, 77, 55, 0.9);
+    border-radius: 20px;
+    height: 112px;
+    top: 169px !important;
+    .ant-dropdown-menu {
+        background-color: unset;
+        box-shadow: unset;
+        padding: 0;
+        margin: auto 8px;
+        li:hover {
+            background-color: unset;
+        }
+        li {
+            text-align: center;
+            height: 56px;
+            line-height: 56px;
+            padding: 0;
+            cursor: pointer;
+            .ant-dropdown-menu-title-content {
+                transition: all 0.1s;
+                height: 40px;
+                width: 100%;
+                line-height: 40px;
+            }
+            .ant-dropdown-menu-title-content:hover {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 12px;
+            }
+            span {
+                color: #ffffff;
+                font-size: 14px;
+            }
+            .logout-out {
+                border: unset;
+                color: #ffffff;
+                font-size: 14px;
+                width: 100px;
+                height: 40px;
+                background: unset;
+                border-radius: 6px;
+            }
+        }
+        li:first-child {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .account {
+        .title {
+            font-size: 20px;
+        }
+        .address {
+            span {
+                padding: 0 8px;
+            }
+        }
+    }
+    .account-dropmenu {
+        top: 159px !important;
+    }
+}

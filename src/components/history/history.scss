@@ -1,0 +1,87 @@
+.history-content {
+    width: 100%;
+    background: #141D26;
+    border-radius: 16px;
+    .title-tabs,
+    .history {
+        width: 968px;
+        font-size: 12px;
+        display: flex;
+
+        align-items: center;
+        text-align: center;
+        .index,
+        .number,
+        .date,
+        .status {
+            width: 25%;
+        }
+        .index {
+            a {
+                color: #a9b0bb;
+                text-decoration: underline;
+            }
+        }
+        .status {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 14px;
+                height: 14px;   
+            }
+            .Progress {
+                animation: spin 2s infinite;
+            }
+        }
+    }
+    .title-tabs {
+        color: #ffffff;
+        height: 48px;
+        font-weight: 700;
+        margin: 0 auto;
+        border-bottom: 1px solid #595d64;
+    }
+    .histories {
+        height: 256px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .history {
+        transition: all 0.1s;
+        color: #a9b0bb;
+        height: 24px;
+        margin: 16px auto;
+        cursor: pointer;
+    }
+    .history:hover {
+        background: rgba(89, 93, 100, 0.5);
+    }
+}
+
+.histories::-webkit-scrollbar {
+    width: 0;
+}
+
+@media screen and (min-width: 750px) and (max-width: 1200px) {
+    .history-content {
+        .title-tabs,
+        .history {
+            width: 568px;
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .history-content {
+        .title-tabs,
+        .history {
+            width: 315px;
+        }
+        .history {
+            .index {
+                word-break: break-all;
+            }
+        }
+    }
+}
