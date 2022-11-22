@@ -83,12 +83,12 @@ export default function Bridge(props: any) {
         const tx_hash = localStorage.getItem('processTxHash');
         if (tx_hash) {
             const tx = await getTransaction(tx_hash);
-            if (tx?.tx_status?.status === 'committed') {
+            if (tx?.tx_status?.status === 'pending') {
+                setCanBridge(false);
+            } else {
                 setCanBridge(true);
                 localStorage.removeItem('processTxHash');
                 localStorage.removeItem('processTokens');
-            } else {
-                setCanBridge(false);
             }
         } else {
             setCanBridge(true);

@@ -72,9 +72,7 @@ export class TransferNFTBuilder extends Builder {
         // const outputCellsCapacitySum = outputCells.reduce((a, b) => a.add(b.capacity), Amount.ZERO);
 
         // Input MNFT cell already contains CKB for creating output cell
-        const neededAmount = ethereumAddressCell.capacity
-            // .add(new Amount('61', AmountUnit.ckb))
-            .add(fee);
+        const neededAmount = ethereumAddressCell.capacity.add(fee);
 
         // Add necessary capacity.
         const capacityCells = await this.collector.collectCapacity(fromAddress, neededAmount);
@@ -84,9 +82,7 @@ export class TransferNFTBuilder extends Builder {
 
         // Calculate the input capacity and change cell amounts.
         const inputCapacity = capacityCells.reduce((a, c) => a.add(c.capacity), Amount.ZERO);
-        const changeCapacity = inputCapacity.sub(
-            neededAmount // .sub(new Amount('61', AmountUnit.ckb))
-        );
+        const changeCapacity = inputCapacity.sub(neededAmount);
 
         // Add the change cell.
         const changeLockScript = fromAddress.toLockScript();

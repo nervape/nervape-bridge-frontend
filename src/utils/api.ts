@@ -66,7 +66,7 @@ export async function getNFTsAtAddress(address: Address) {
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function getHistories(address: string) {
-    // api
+    // history example
     const histories: HISTORY[] = [
         {
             completed_at: 1668569919240,
