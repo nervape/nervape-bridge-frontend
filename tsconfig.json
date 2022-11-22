@@ -20,6 +20,5 @@
         "rootDir": "./",
         "outDir": "./dist/js",
     },
-    "include": ["./src/**/*", "./dist/ts/**/*", "./schemas/*.json", "./build/**/*.json", "./scripts", "./test", "src", "images.d.ts"],
-    "files": ["./hardhat.config.ts"]
+    "include": ["./src/**/*", "./dist/ts/**/*", "./schemas/*.json", "./build/**/*.json", "./scripts", "./test", "src", "images.d.ts"]
   }

@@ -6,7 +6,6 @@ import twitter from '../../assets/images/header/twitter.png';
 import discord from '../../assets/images/header/discode.png';
 
 import { DataContext, getWindowScrollTop, scrollToTop } from '../../utils/util';
-import { CONFIG } from '../../utils/config';
 
 export interface NavPageInfo {
     title: string;
@@ -132,7 +131,6 @@ export default function NavHeader(props: any) {
                     src={logo}
                     onClick={() => {
                         setDisableList(true);
-                        window.location.href = CONFIG.WEBSITE_HOST;
                         window.scrollTo(0, 0);
                     }}
                 />
@@ -167,7 +165,6 @@ export default function NavHeader(props: any) {
                                     onClick={() => {
                                         setDisableList(true);
                                         if (!v.url) return;
-                                        window.location.href = `${CONFIG.WEBSITE_HOST}${v.url}`;
                                         window.scrollTo(0, 0);
                                     }}
                                 >
